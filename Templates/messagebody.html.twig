@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <p>Dear <b>{{ dataObject.userName }}</b>, <br><br>
+    Please find attached the most recent invoice(s) for use of the equipment listed below.
+    </p>
+    <p>If you have an questions please contact core facilties at ph: ###### or email: ######
+    </p>
+    <br /><br />
+
+    <table style="width: 100%;border-style:solid;border-width:4px;">
+      <thead>
+        <tr><th style="font-size: 20px;text-align:left;">Equipment, Date and Time Used</th></tr>
+      </thead>
+      <tbody>
+      {#{dump(dataObject)}#}
+        {% for details in dataObject.serviceInfoArray %}
+          <tr><td style="border-style:solid; border-width:4px;">
+            {{details}}
+          </td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <p>Thank you for using our core facilities,</p>
+
+    <p>CCNY CoreLABS team</p>
+
+{% endblock %}

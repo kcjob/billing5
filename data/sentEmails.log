@@ -1,0 +1,61 @@
+++ Starting Swift_SmtpTransport
+<< 220 outgoing.ccny.cuny.edu ESMTP Postfix
+
+>> EHLO [127.0.0.1]
+
+<< 250-outgoing.ccny.cuny.edu
+250-PIPELINING
+250-SIZE 35000000
+250-VRFY
+250-ETRN
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250 DSN
+
+>> STARTTLS
+
+<< 220 2.0.0 Ready to start TLS
+
+>> EHLO [127.0.0.1]
+
+<< 250-outgoing.ccny.cuny.edu
+250-PIPELINING
+250-SIZE 35000000
+250-VRFY
+250-ETRN
+250-AUTH LOGIN PLAIN
+250-AUTH=LOGIN PLAIN
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250 DSN
+
+>> AUTH LOGIN
+
+<< 334 VXNlcm5hbWU6
+
+>> Y2pvYg==
+
+<< 334 UGFzc3dvcmQ6
+
+>> VG9iYWdvMjE3QA==
+
+<< 235 2.7.0 Authentication successful
+
+++ Swift_SmtpTransport started
+>> MAIL FROM:<cjob@ccny.cuny.edu>
+
+<< 250 2.1.0 Ok
+
+>> RCPT TO:<kchrisj@gmail.com>
+
+<< 250 2.1.5 Ok
+
+>> DATA
+
+<< 354 End data with <CR><LF>.<CR><LF>
+
+>> 
+.
+
+<< 250 2.0.0 Ok: queued as F282D220084

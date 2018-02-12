@@ -1,0 +1,17 @@
+{# templates/base.html.twig #}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Billing</title>
+
+      {% block stylesheets %}
+        <link href="../css/main.css" rel="stylesheet" />
+      {% endblock %}
+
+  </head>
+  <body>
+    <form>
+      <div class="content"> {% block content %} {% endblock %} </div>
+    </form>
+  </body>
+</html>
